@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Will You Go Out With Me?</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Hey cutie 🌷</h1>
+    <p class="subheading">I was just wondering if you wanted to...</p>
+  </header>
+
+  <section class="main-content">
+    <p>...go out with me?😋</p>
+    <div class="button-group">
+      <button class="yes" onclick="location.href='gotcha.html'">Yessssss 🫦</button>
+      <button class="no" id="noButton">Nooooo 😳</button>
+    </div>
+  </section>
+<div class="floating-img-container">
+    <img src="uni1.jpg" alt="Floating Image">
+</div>
+
+  
+
+
+
+  <script>
+    const noButton = document.getElementById('noButton');
+
+    noButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        const maxX = window.innerWidth - noButton.offsetWidth - 20;
+        const maxY = window.innerHeight - noButton.offsetHeight - 20;
+        const randomX = Math.floor(Math.random() * maxX);
+        const randomY = Math.floor(Math.random() * maxY);
+
+        noButton.style.position = 'absolute';
+        noButton.style.left = `${randomX}px`;
+        noButton.style.top = `${randomY}px`;
+    });
+  </script>
+  
+</body>
+</html>

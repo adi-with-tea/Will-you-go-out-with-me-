@@ -1,0 +1,124 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url('Untitled design.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    color: #d6336c;
+    text-align: center;
+}
+
+
+
+/* Floating Image Container */
+.floating-img-container {
+    position: relative;
+    width: 100%;
+    height: 200px; /* Height reserved for the floating image */
+    margin-bottom: 60px; /* space above the footer */
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Animated Image */
+.floating-img-container img {
+    width: 200px;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    animation: slideLeftRight 4s infinite alternate ease-in-out;
+    z-index: 1;
+}
+
+@keyframes slideLeftRight {
+    from {
+        left: 100%;
+        transform: translateX(-100%);
+    }
+    to {
+        left: 0%;
+        transform: translateX(0);
+    }
+}
+
+
+/* Centered Question Box */
+.main-content {
+    background: linear-gradient(to bottom right, #ffe6ea, #ffffff);
+    border-radius: 30px;
+    padding: 40px 30px;  /* Smaller padding */
+    max-width: 450px;    /* Reduced width */
+    margin: 80px auto;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    position: relative;
+    z-index: 2;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.main-content h1 {
+    font-size: 2rem; /* Smaller font size */
+    margin-bottom: 20px;  /* Reduced margin */
+    color: #d6336c;
+    text-shadow: 1px 1px 2px #ffb3c6;
+}
+
+/* Buttons Container */
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Common Button Style */
+button {
+    border: none;
+    padding: 12px 24px;  /* Slightly smaller buttons */
+    font-size: 1.1rem;    /* Slightly smaller font size */
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Yes Button */
+button.yes {
+    background-color: #ffb3c6;
+    color: white;
+}
+
+button.yes:hover {
+    background-color: #ff3370;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(255, 77, 136, 0.4);
+}
+
+/* No Button */
+button.no {
+    background-color: #ffb3c6;
+    color: white;
+    position: relative;
+    transition: top 0.3s ease, left 0.3s ease;
+    z-index: 10;
+}
+
+button.no:hover {
+    background-color: #ffa3b5;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(255, 179, 198, 0.4);
+}
+
+

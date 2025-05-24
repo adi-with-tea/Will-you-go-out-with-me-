@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gotcha!</title>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #eba1b7;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-size: 2.5rem;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .surprise-image {
+            width: 300px;
+            margin-top: 30px;
+            opacity: 0;
+            transform: scale(0.5);
+            animation: popIn 1.2s ease-out 1s forwards; /* 1s delay */
+        }
+
+        @keyframes popIn {
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    BWAHAHA! GOTCHA! NOOB
+    <img src="uni2.jpg" alt="Gotcha Cat" class="surprise-image" />
+</body>
+</html>
